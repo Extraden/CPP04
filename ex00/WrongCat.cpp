@@ -1,21 +1,20 @@
 #include <iostream>
 #include "WrongCat.hpp"
-#include "WrongAnimal.hpp"
 
 WrongCat::WrongCat()
 {
-    _type = "Cat";
-    std::cout << "Cat is created!\n";
+    _type = "WrongCat";
+    std::cout << "WrongCat is created!\n";
 }
 
 WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
-    std::cout << "Cat copy constructor called\n";
+    std::cout << "WrongCat copy constructor called\n";
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-    std::cout << "Cat assignment operator called\n";
+    std::cout << "WrongCat assignment operator called\n";
     if (this != &other)
         WrongAnimal::operator=(other);
     return *this;
@@ -24,7 +23,7 @@ WrongCat& WrongCat::operator=(const WrongCat& other)
 
 WrongCat::~WrongCat()
 {
-    std::cout << "Cat is destroyed!\n";
+    std::cout << "WrongCat is destroyed!\n";
 }
 
 void    WrongCat::makeSound() const

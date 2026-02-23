@@ -1,7 +1,7 @@
 #include <iostream>
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal() : _type("unknown")
 {
     std::cout << "Wrong animal created\n";
 }
