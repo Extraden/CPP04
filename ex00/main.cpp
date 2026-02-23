@@ -1,7 +1,9 @@
-#include <iostream>
+#include "Animal.hpp"
 
 int	main()
 {
-	std::cout << "Hello!\n";
+  Animal a;
+
+  Animal b = Animal(a);
 	return (0);
 }
