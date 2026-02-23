@@ -12,7 +12,7 @@ class Animal
     ~Animal();
 
   protected:
-    std::string _name;
+    std::string _type;
 };
 
 #endif

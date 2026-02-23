@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Animal.hpp"
 
-Animal::Animal() : _name("default")
+Animal::Animal() : _type("unknown")
 {
-  std::cout << "Animal " << _name << " is created\n";
+  std::cout << "Animal " << _type << " is created\n";
 }
 
 Animal::Animal(const Animal& other)
@@ -16,11 +16,11 @@ Animal& Animal::operator=(const Animal& other)
 {
   std::cout << "Assignment operator called\n";
   if (this != &other)
-    this->_name = other._name;
+    this->_type = other._type;
   return (*this);
 }
 
 Animal::~Animal()
 {
-  std::cout << "Animal " << _name << " is destroyed\n";
+  std::cout << "Animal " << _type << " is destroyed\n";
 }
