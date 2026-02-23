@@ -2,7 +2,7 @@ NAME = animals
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -MMD -MP -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(OBJS:.o=.d)
 
@@ -16,11 +16,11 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(NAME)
-
-fclean: clean
 	rm -rf $(OBJS)
 	rm -rf $(DEPS)
+
+fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all
 
