@@ -24,7 +24,7 @@ Animal::~Animal()
   std::cout << "Animal " << _type << " is destroyed\n";
 }
 
-std::string Animal::getType() const
+const std::string& Animal::getType() const
 {
   return (this->_type);
 }

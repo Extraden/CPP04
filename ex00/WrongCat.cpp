@@ -1,32 +1,33 @@
 #include <iostream>
-#include "Cat.hpp"
+#include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
     _type = "Cat";
     std::cout << "Cat is created!\n";
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
     std::cout << "Cat copy constructor called\n";
 }
 
-Cat& Cat::operator=(const Cat& other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
     std::cout << "Cat assignment operator called\n";
     if (this != &other)
-        Animal::operator=(other);
+        WrongAnimal::operator=(other);
     return *this;
 }
 
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
     std::cout << "Cat is destroyed!\n";
 }
 
-void    Cat::makeSound() const
+void    WrongCat::makeSound() const
 {
     std::cout << "Meow!\n";
 }
