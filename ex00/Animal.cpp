@@ -6,15 +6,14 @@ Animal::Animal() : _type("unknown")
   std::cout << "Animal " << _type << " is created\n";
 }
 
-Animal::Animal(const Animal& other)
+Animal::Animal(const Animal& other) : _type(other._type)
 {
   std::cout << "Animal copy constructor called\n";
-  *this = other;
 }
 
 Animal& Animal::operator=(const Animal& other)
 {
-  std::cout << "Assignment operator called\n";
+  std::cout << "Animal assignment operator called\n";
   if (this != &other)
     this->_type = other._type;
   return (*this);
@@ -23,4 +22,9 @@ Animal& Animal::operator=(const Animal& other)
 Animal::~Animal()
 {
   std::cout << "Animal " << _type << " is destroyed\n";
+}
+
+std::string Animal::getType() const
+{
+  return (this->_type);
 }

@@ -1,9 +1,10 @@
+#include <iostream>
 #include "Animal.hpp"
 
 int	main()
 {
   Animal a;
 
-  Animal b = Animal(a);
+  std::cout << a.getType() << "\n";
 	return (0);
 }
