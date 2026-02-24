@@ -5,31 +5,27 @@
 
 static void deepCopyTests()
 {
-    std::cout << "---- DEEP COPY TESTS ----\n";
+    std::cout << "\n---- DEEP COPY TESTS ----\n";
 
-    {
-        std::cout << "[Dog]\n";
-        Dog* d1 = new Dog();
-        Dog* d2 = new Dog(*d1);
-        Dog* d3 = new Dog();
-        *d3 = *d1;
+    std::cout << "[Dog]\n";
+    Dog* d1 = new Dog();
+    Dog* d2 = new Dog(*d1);
+    Dog* d3 = new Dog();
+    *d3 = *d1;
 
-        delete d1;
-        delete d2;
-        delete d3;
-    }
+    delete d1;
+    delete d2;
+    delete d3;
 
-    {
-        std::cout << "[Cat]\n";
-        Cat* c1 = new Cat();
-        Cat* c2 = new Cat(*c1);
-        Cat* c3 = new Cat();
-        *c3 = *c1;
+    std::cout << "[Cat]\n";
+    Cat* c1 = new Cat();
+    Cat* c2 = new Cat(*c1);
+    Cat* c3 = new Cat();
+    *c3 = *c1;
 
-        delete c1;
-        delete c2;
-        delete c3;
-    }
+    delete c1;
+    delete c2;
+    delete c3;
 }
 
 int main()
