@@ -20,7 +20,6 @@ Cat& Cat::operator=(const Cat& other)
     return *this;
 }
 
-
 Cat::~Cat()
 {
     std::cout << "Cat is destroyed!\n";

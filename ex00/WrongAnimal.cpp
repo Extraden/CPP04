@@ -24,7 +24,7 @@ WrongAnimal::~WrongAnimal()
     std::cout << "Wrong animal destroyed\n";
 }
 
-std::string WrongAnimal::getType() const
+const std::string& WrongAnimal::getType() const
 {
   return (this->_type);
 }
