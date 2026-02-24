@@ -1,9 +1,8 @@
 #include <iostream>
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat()
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-    _type = "WrongCat";
     std::cout << "WrongCat is created!\n";
 }
 
@@ -19,7 +18,6 @@ WrongCat& WrongCat::operator=(const WrongCat& other)
         WrongAnimal::operator=(other);
     return *this;
 }
-
 
 WrongCat::~WrongCat()
 {

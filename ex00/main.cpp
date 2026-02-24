@@ -19,7 +19,7 @@ int	main()
   delete d;
   delete c;
 
-  std::cout << "---- WRONG TESTS ----" << std::endl;
+  std::cout << "\n---- WRONG TESTS ----\n" << std::endl;
 
   const WrongAnimal* wa = new WrongAnimal();
   const WrongAnimal* wc = new WrongCat();

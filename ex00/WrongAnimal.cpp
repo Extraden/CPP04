@@ -3,7 +3,12 @@
 
 WrongAnimal::WrongAnimal() : _type("unknown")
 {
-    std::cout << "Wrong animal created\n";
+    std::cout << "Wrong animal is created\n";
+}
+
+WrongAnimal::WrongAnimal(const std::string& type) : _type(type)
+{
+    std::cout << "Wrong animal " << _type << " is created\n";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) : _type(other._type)
