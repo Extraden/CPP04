@@ -1,9 +1,8 @@
 #include <iostream>
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : Animal("Cat")
 {
-    _type = "Cat";
     std::cout << "Cat is created!\n";
 }
 
